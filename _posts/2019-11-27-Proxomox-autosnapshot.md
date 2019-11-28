@@ -124,3 +124,8 @@ Report bugs to support@corsinvest.it
 
 
 
+
+
+#### 配置定时任务
+Linux下配置定时任务基本上就是用crontab，所以我在线上的虚拟里面按上面的步骤装上了`cv4pve-autosnap`之后，在定时任务里加了一条任务就可以了：
+`1 */3 * * *  /tools/cv4pve-autosnap --host xxx.xxx.xxx.xxx --username pvesnap--password 123456789 --vmid 103 snap --label 'hourly'  --keep=10 `
