@@ -37,3 +37,46 @@ Successfully added user: {
 ```
 > db.auth("myadmin","nicetomeetyou")
 ```
+
+
+### 管理索引
+1. 查看某个collection所有的索引
+```
+> db.users.getIndexes()
+[
+	{
+		"v" : 2,
+		"key" : {
+			"_id" : 1
+		},
+		"name" : "_id_",
+		"ns" : "yourbiz.users"
+	},
+	{
+		"v" : 2,
+		"unique" : true,
+		"key" : {
+			"phone" : 1
+		},
+		"name" : "phone_1",
+		"ns" : "yourbiz.users",
+		"background" : true
+	},
+	{
+		"v" : 2,
+		"unique" : true,
+		"key" : {
+			"outId" : 1
+		},
+		"name" : "outId_1",
+		"ns" : "yourbiz.users",
+		"background" : true
+	}
+]
+>
+```
+2. 删除某个索引
+```
+> db.users.dropIndex('phone_1')
+{ "nIndexesWas" : 4, "ok" : 1 }
+```
