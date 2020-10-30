@@ -80,3 +80,13 @@ Successfully added user: {
 > db.users.dropIndex('phone_1')
 { "nIndexesWas" : 4, "ok" : 1 }
 ```
+
+3. 备份某个库
+```
+$> mongodump --uri="mongodb://root:example@127.0.0.1:27017/somdb?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false"
+```
+
+4. 恢复某个库
+```
+$> mongorestore --uri="mongodb://root:example@127.0.0.1:27017/somdb?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false"
+```
