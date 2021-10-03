@@ -22,13 +22,13 @@ published: true
 ```
 2. 在这个db下创建一个用户
 ```
-> db.createUser({user:"myadmin”,pwd:"nicetomeetyou”,roles:[{role:"readWrite”,db:"somedb”}]})
+> db.createUser({user:"myadmin",pwd:"nicetomeetyou",roles:[{role:"readWrite",db:"somedb"}]})
 Successfully added user: {
-	"user” : "myadmin”,
-	"roles” : [
+	"user" : "myadmin",
+	"roles" : [
 		{
-			"role” : "readWrite”,
-			"db” : "somedb”
+			"role" : "readWrite",
+			"db" : "somedb"
 		}
 	]
 }
@@ -89,4 +89,29 @@ $> mongodump --uri="mongodb://root:example@127.0.0.1:27017/somdb?authSource=admi
 4. 恢复某个库
 ```
 $> mongorestore --uri="mongodb://root:example@127.0.0.1:27017/somdb?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false"
+```
+
+5. 设置密码
+默认安装了mongodb之后密码为空，直接在本地`mongo --port=21017`即可登录，若想设置密码，则需要先登录上，并使用以下命令设置用户名和密码：
+```
+> use admin
+switched to db admin
+> db.createUser({user:"myAdmin",pwd:"passwordYOuWant",roles:[{role:"userAdminAnyDatabase",db:"admin"}]})
+Successfully added user: {
+	"user" : "myAdmin",
+	"roles" : [
+		{
+			"role" : "userAdminAnyDatabase",
+			"db" : "admin"
+		}
+	]
+}
+>
+> db.auth("myAdmin","passwordYOuWant")
+1
+```
+然后在配置文件中打开安全设置 ：
+```
+security:
+  authorization: enabled
 ```
