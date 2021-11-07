@@ -115,3 +115,9 @@ Successfully added user: {
 security:
   authorization: enabled
 ```
+
+6. 添加权限到数据库
+
+```
+db.grantRolesToUser('myaccount',[{role:'readWrite',db:'somedb'}])
+```
