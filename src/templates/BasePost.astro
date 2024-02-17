@@ -11,7 +11,7 @@ export interface Props {
 
 const { content } = Astro.props as Props;
 const title = `${content.title} - ${AppConfig.site_name}`;
-const keywords = `${content.title}`;
+const keywords = `${content.keywords}`;
 ---
 
 <Base head={{ title, description: content.description, keywords }}>

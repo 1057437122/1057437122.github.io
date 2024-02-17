@@ -1,6 +1,7 @@
 export interface IFrontmatter {
   title: string;
   description: string;
+  keywords: string;
   pubDate: string;
   imgSrc: string;
   imgAlt: string;
