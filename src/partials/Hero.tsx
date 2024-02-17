@@ -1,9 +1,4 @@
-import {
-  GradientText,
-  HeroAvatar,
-  HeroSocial,
-  Section,
-} from 'astro-boilerplate-components';
+import { GradientText, HeroAvatar, HeroSocial, Section } from '@/dependences';
 
 const Hero = () => (
   <Section>
@@ -15,15 +10,19 @@ const Hero = () => (
       }
       description={
         <>
-          A lazy <a className="text-cyan-400 hover:underline" href="/">
+          A lazy{' '}
+          <a className="text-cyan-400 hover:underline" href="/">
             fake
-          </a>{' '}fullstack {' '}
+          </a>{' '}
+          fullstack{' '}
           <a className="text-cyan-400 hover:underline" href="/">
             developer
-          </a>{' '},
-          dreaming to become a <a className="text-cyan-400 hover:underline" href="/">
+          </a>{' '}
+          , dreaming to become a{' '}
+          <a className="text-cyan-400 hover:underline" href="/">
             musician
-          </a>{' '}.
+          </a>{' '}
+          .
         </>
       }
       avatar={

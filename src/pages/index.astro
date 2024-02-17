@@ -1,10 +1,12 @@
 ---
-import type { IFrontmatter } from "astro-boilerplate-components";
+import type { IFrontmatter } from "@/dependences";
 
 import { Contact } from "@/partials/Contact";
 import { Hero } from "@/partials/Hero";
 import { ProjectList } from "@/partials/ProjectList";
 import { RecentPosts } from "@/partials/RecentPosts";
+import { SkillCloud } from "@/partials/SkillCloud";
+import { WhatIDo } from "@/partials/WhatIDo";
 import Base from "@/templates/Base.astro";
 import { AppConfig } from "@/utils/AppConfig";
 import { sortByDate } from "@/utils/Posts";
@@ -20,6 +22,8 @@ const { keywords } = AppConfig;
 
 <Base head={{ title, description, keywords }}>
   <Hero />
+  <WhatIDo />
+  <SkillCloud />
   <ProjectList />
   <RecentPosts postList={lastThreePosts} />
   <Contact />

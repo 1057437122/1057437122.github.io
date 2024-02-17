@@ -1,4 +1,4 @@
-import { Section } from 'astro-boilerplate-components';
+import { Section } from '@/dependences';
 
 import betterStackLogo from '../../public/assets/images/better-stack-white.png';
 import clerkLogo from '../../public/assets/images/clerk.png';
