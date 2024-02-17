@@ -35,15 +35,14 @@ const { page } = Astro.props as Props;
 const titleSuffix = ` - ${AppConfig.site_name}`;
 const titleBase = `Blog page ${page.currentPage}`;
 const title = titleBase + titleSuffix;
-const description =
-  "Pagination example built with Astro styled with Tailwind CSS.";
+const description = "To live with God is to let God live in you.";
 ---
 
 <Base head={{ title, description }}>
   <Section>
     <PaginationHeader
-      title="I love flutter, for now"
-      description="These posts are my thinking nd solution in solving flutter problems."
+      title="My Diary"
+      description="To live with God is to let God live in you."
     />
   </Section>
 

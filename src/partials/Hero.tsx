@@ -15,12 +15,14 @@ const Hero = () => (
       }
       description={
         <>
-          A lazy fullstack {' '}
+          A lazy <a className="text-cyan-400 hover:underline" href="/">
+            fake
+          </a>{' '}fullstack {' '}
           <a className="text-cyan-400 hover:underline" href="/">
-          developer
+            developer
           </a>{' '},
           dreaming to become a <a className="text-cyan-400 hover:underline" href="/">
-          musician
+            musician
           </a>{' '}.
         </>
       }

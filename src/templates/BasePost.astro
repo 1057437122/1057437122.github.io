@@ -1,10 +1,10 @@
 ---
-import type { IFrontmatter } from 'astro-boilerplate-components';
+import type { IFrontmatter } from "astro-boilerplate-components";
 
-import { BlogPost } from '@/partials/BlogPost';
-import { CTA } from '@/partials/CTA';
-import Base from '@/templates/Base.astro';
-import { AppConfig } from '@/utils/AppConfig';
+import { BlogPost } from "@/partials/BlogPost";
+import { Contact } from "@/partials/Contact";
+import Base from "@/templates/Base.astro";
+import { AppConfig } from "@/utils/AppConfig";
 
 export interface Props {
   content: IFrontmatter;
@@ -15,10 +15,10 @@ const title = `${content.title} - ${AppConfig.site_name}`;
 const keywords = `${content.title}`;
 ---
 
-<Base head={{ title, description: content.description,keywords }}>
+<Base head={{ title, description: content.description, keywords }}>
   <BlogPost frontmatter={content}>
     <slot></slot>
   </BlogPost>
 
-  <CTA />
+  <Contact />
 </Base>
