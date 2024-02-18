@@ -1,34 +1,48 @@
 ---
-import { Footer } from '@/partials/Footer';
-import { Navbar } from '@/partials/Navbar';
-import { AppConfig } from '@/utils/AppConfig';
+import { Footer } from "@/partials/Footer";
+import { Navbar } from "@/partials/Navbar";
+import { AppConfig } from "@/utils/AppConfig";
 
 export interface Props {
   head: {
     title: string;
     description: string;
-    keywords?:string;
+    keywords?: string;
   };
 }
 
 const {
-  head: { title, description ,keywords},
+  head: { title, description, keywords },
 } = Astro.props as Props;
 ---
 
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <meta name='description' content={description} />
-    <meta name='author' content={AppConfig.author} />
-    <meta name='keywords' content={keywords} />
+    <meta name="description" content={description} />
+    <meta name="author" content={AppConfig.author} />
+    <meta name="keywords" content={keywords} />
 
-    <link rel='alternate' type='application/rss+xml' href='/rss.xml' />
-    <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFDTJQD3P9"
+    >
+
+    </script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-RFDTJQD3P9");
+    </script>
+    <!-- Google tag (gtag.js) -->
   </head>
-  <body class='bg-slate-900 text-gray-100'>
+
+  <body class="bg-slate-900 text-gray-100">
     <Navbar />
 
     <slot></slot>
