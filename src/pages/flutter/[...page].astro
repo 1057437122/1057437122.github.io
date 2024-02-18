@@ -30,7 +30,7 @@ interface Props {
 
 const { page } = Astro.props as Props;
 const titleSuffix = ` - ${AppConfig.site_name}`;
-const titleBase = `Blog page ${page.currentPage}`;
+const titleBase = `Blog page ${page?.currentPage ?? 0}`;
 const title = titleBase + titleSuffix;
 const description = "thinking in flutter";
 ---

@@ -11,7 +11,7 @@ import Base from "@/templates/Base.astro";
 import { AppConfig } from "@/utils/AppConfig";
 import { sortByDate } from "@/utils/Posts";
 
-const allPosts = await Astro.glob<IFrontmatter>("./flutter/*.md");
+const allPosts = await Astro.glob<IFrontmatter>("./**/*.md");
 const sortedPosts = sortByDate(allPosts);
 const lastThreePosts = sortedPosts.slice(0, 3);
 
