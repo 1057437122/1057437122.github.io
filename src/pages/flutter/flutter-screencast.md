@@ -17,6 +17,8 @@ Nowadays castscreen from a phone to a TV is pretty easy, you can use chrome-cast
 
 so today we will use DLNA protocol to cast videos to an android TV.
 
+to know more about DLNA, please read [DLNA conception](../../others/dlna-conception/).
+
 ## Pros and cons of using DLNA protocol
 
 ### Pros

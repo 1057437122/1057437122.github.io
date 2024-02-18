@@ -3,7 +3,7 @@ layout: '@/templates/BasePost.astro'
 title: Some Psql command
 description: Postgre sql commands.
 pubDate: 2022-05-08T00:00:00Z
-imgSrc: 'https://images.unsplash.com/photo-1707343846292-56e4c6abf291?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+imgSrc: 'https://images.unsplash.com/photo-1545665277-5937489579f2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2NyZWVufGVufDB8fDB8fHww'
 imgAlt: 'postgre sql'
 ---
 

@@ -32,14 +32,14 @@ const { page } = Astro.props as Props;
 const titleSuffix = ` - ${AppConfig.site_name}`;
 const titleBase = `Blog page ${page.currentPage}`;
 const title = titleBase + titleSuffix;
-const description = "thinking in flutter";
+const description = "Some other post.";
 ---
 
 <Base head={{ title, description }}>
   <Section>
     <PaginationHeader
-      title="I love flutter, for now"
-      description="These posts are my thinking nd solution in solving flutter problems."
+      title="No Category"
+      description="These posts are some other categories."
     />
   </Section>
 
