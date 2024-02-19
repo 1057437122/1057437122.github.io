@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 import type { IProjectmatter } from '@/dependences';
-import { Section } from '@/dependences';
+import { ColorTags, Section, Tags } from '@/dependences';
 
 type IProjectPageProps = {
   projectmatter: IProjectmatter;
@@ -31,18 +31,25 @@ const ProjectPage = (props: IProjectPageProps) => (
         />
       </div>
       <div>
-        <div className="flex flex-col items-center gap-x-2 p-2 sm:flex-row">
-          <div className="py-3 text-2xl">{props.projectmatter.title}</div>
-          <IconComponent
-            imgAlt={props.projectmatter.title}
-            imgSrc="/assets/images/ios-icon-white.png"
-            url={props.projectmatter.iosDownloadUrl}
-          />
-          <IconComponent
-            imgAlt={props.projectmatter.title}
-            imgSrc="/assets/images/android-icon-white.png"
-            url={props.projectmatter.androidDownloadUrl}
-          />
+        <div className="flex flex-col">
+          <div className="flex flex-col items-center gap-x-2 sm:flex-row">
+            <div className="py-3 text-2xl">{props.projectmatter.title}</div>
+            <IconComponent
+              imgAlt={props.projectmatter.title}
+              imgSrc="/assets/images/ios-icon-white.png"
+              url={props.projectmatter.iosDownloadUrl}
+            />
+            <IconComponent
+              imgAlt={props.projectmatter.title}
+              imgSrc="/assets/images/android-icon-white.png"
+              url={props.projectmatter.androidDownloadUrl}
+            />
+          </div>
+          <div className="my-2 flex flex-wrap gap-2">
+            {props.projectmatter.stacks?.map((s) => (
+              <Tags color={ColorTags.GRAY}>{s}</Tags>
+            ))}
+          </div>
         </div>
         <div>{props.projectmatter.description}</div>
       </div>

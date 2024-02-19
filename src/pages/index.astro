@@ -1,19 +1,21 @@
 ---
-import type { IFrontmatter } from "@/dependences";
+import type { type IFrontmatter, IProjectmatter } from '@/dependences';
+import { Contact } from '@/partials/Contact';
+import { Hero } from '@/partials/Hero';
+import { ProjectList } from '@/partials/ProjectList';
+import { RecentPosts } from '@/partials/RecentPosts';
+import { SkillCloud } from '@/partials/SkillCloud';
+import { WhatIDo } from '@/partials/WhatIDo';
+import Base from '@/templates/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+import { sortByDate } from '@/utils/Posts';
 
-import { Contact } from "@/partials/Contact";
-import { Hero } from "@/partials/Hero";
-import { ProjectList } from "@/partials/ProjectList";
-import { RecentPosts } from "@/partials/RecentPosts";
-import { SkillCloud } from "@/partials/SkillCloud";
-import { WhatIDo } from "@/partials/WhatIDo";
-import Base from "@/templates/Base.astro";
-import { AppConfig } from "@/utils/AppConfig";
-import { sortByDate } from "@/utils/Posts";
-
-const allPosts = await Astro.glob<IFrontmatter>("./**/*.md");
+const allPosts = await Astro.glob<IFrontmatter>('./**/*.md');
 const sortedPosts = sortByDate(allPosts);
 const lastThreePosts = sortedPosts.slice(0, 3);
+
+const allProjects = await Astro.glob<IProjectmatter>('./projects/*.md');
+const sortedProjects = sortByDate(allProjects);
 
 const { title } = AppConfig;
 const { description } = AppConfig;
@@ -24,7 +26,7 @@ const { keywords } = AppConfig;
   <Hero />
   <WhatIDo />
   <SkillCloud />
-  <ProjectList />
+  <ProjectList projectList={allProjects} />
   <RecentPosts postList={lastThreePosts} />
   <Contact />
 </Base>

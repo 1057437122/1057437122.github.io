@@ -1,5 +1,6 @@
 ---
 layout: '@/templates/Project.astro'
+link: /projects/alert-me/
 title: Alert me
 description: An app base on location share and location notification.
 keywords: Location based notification app
@@ -9,5 +10,5 @@ imgs: ['https://is1-ssl.mzstatic.com/image/thumb/PurpleSource123/v4/b7/23/29/b72
 imgAlt: 'Alert-me'
 iosDownloadUrl: 'https://apps.apple.com/es/app/alert-me/id6444185245'
 androidDownloadUrl: ''
-stacks: ['firebase','google map','location','firebase-notification']
+stacks: ['Firebase','Google map','Location','Firebase-notification']
 ---

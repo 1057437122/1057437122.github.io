@@ -1,6 +1,7 @@
 ---
 layout: '@/templates/Project.astro'
 title: BizQ
+link: /projects/bizq/
 description: A multi-shop online business platform.
 keywords: online business, online market, multi-shop
 pubDate: 2021-03-01T00:00:00Z
@@ -9,4 +10,5 @@ imgs: ['https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/6d/44/b8/6d4
 imgAlt: 'BizQ'
 iosDownloadUrl: 'https://apps.apple.com/es/app/bizq/id1497423597'
 androidDownloadUrl: 'https://play.google.com/store/apps/details?id=com.enterprise.bizq'
+stacks: ['Nginx','Docker','NodeJS','ExpressJS','Pm2','Micro-Service','Websocket']
 ---

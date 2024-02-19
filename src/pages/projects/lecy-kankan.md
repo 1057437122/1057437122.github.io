@@ -1,5 +1,6 @@
 ---
 layout: '@/templates/Project.astro'
+link: /projects/lecy-kankan/
 title: 看看-海外华人社区
 description: A social app for Chinese people around the world.
 keywords: Chinese social app
@@ -9,6 +10,7 @@ imgs: ['https://is1-ssl.mzstatic.com/image/thumb/PurpleSource122/v4/48/50/cf/485
 imgAlt: '看看-海外华人社区'
 iosDownloadUrl: 'https://apps.apple.com/cn/app/%E7%9C%8B%E7%9C%8B-%E6%B5%B7%E5%A4%96%E5%8D%8E%E4%BA%BA%E7%A4%BE%E5%8C%BA/id1616558305'
 androidDownloadUrl: 'https://play.google.com/store/apps/details?id=cc.lecy.lecy'
+stacks: ['Flutter','Firebase','Bloc','Firebase Notification']
 ---
 
 

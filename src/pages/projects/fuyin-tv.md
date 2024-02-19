@@ -1,5 +1,6 @@
 ---
 layout: '@/templates/Project.astro'
+link: /projects/fuyin-tv/
 title: Fuyin TV
 description: Fuyin TV is a greate video app for Christians, people can read faithful articles and watch a lot of pastors' videos.
 keywords: Fuyin tv, gospel tv, good news, Christian video app
@@ -9,4 +10,5 @@ imgs: ['https://is1-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/82/55/db/825
 imgAlt: 'Fuyin TV'
 iosDownloadUrl: 'https://apps.apple.com/us/app/%E7%A6%8F%E9%9F%B3tv/id717567955'
 androidDownloadUrl: 'https://play.google.com/store/apps/details?id=com.fuyin.video'
+stacks: ['Flutter','DLNA','Bloc','UPNP','WebSocket','Live-Stream']
 ---

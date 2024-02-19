@@ -9,6 +9,7 @@ export interface IFrontmatter {
 }
 
 export interface IProjectmatter extends IFrontmatter {
+  link: string;
   imgs?: string[]; // for projects slider
   iosDownloadUrl?: string;
   androidDownloadUrl?: string;

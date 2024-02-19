@@ -1,13 +1,13 @@
 ---
-import type { IFrontmatter } from "@/dependences";
-import { Section } from "@/dependences";
-import { ProjectPage } from "@/partials/ProjectPage";
-import { Contact } from "@/partials/Contact";
-import Base from "@/templates/Base.astro";
-import { AppConfig } from "@/utils/AppConfig";
+import type { IProjectmatter } from '@/dependences';
+import { Section } from '@/dependences';
+import { Contact } from '@/partials/Contact';
+import { ProjectPage } from '@/partials/ProjectPage';
+import Base from '@/templates/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
 
 export interface Props {
-    content: IFrontmatter;
+  content: IProjectmatter;
 }
 
 const { content } = Astro.props as Props;
@@ -16,9 +16,9 @@ const keywords = `${content.keywords}`;
 ---
 
 <Base head={{ title, description: content.description, keywords }}>
-    <Section>
-        <ProjectPage frontmatter={content} />
-    </Section>
+  <Section>
+    <ProjectPage projectmatter={content} />
+  </Section>
 
-    <Contact />
+  <Contact />
 </Base>
