@@ -32,7 +32,7 @@ const ProjectPage = (props: IProjectPageProps) => (
       </div>
       <div>
         <div className="flex flex-col items-start">
-          <div className="flex flex-col gap-x-3 sm:flex-row">
+          <div className="flex  flex-row gap-x-3">
             <div className="py-3 text-2xl">{props.projectmatter.title}</div>
             <IconComponent
               imgAlt={props.projectmatter.title}
