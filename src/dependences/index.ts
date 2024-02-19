@@ -19,6 +19,7 @@ import { ColorTags, Tags } from './components/Tags';
 import type {
   FrontmatterPage,
   IFrontmatter,
+  IProjectmatter,
   MarkdownInstance,
   Page,
 } from './types/IFrontMatter';
@@ -26,6 +27,7 @@ import type {
 export {
   type FrontmatterPage,
   type IFrontmatter,
+  type IProjectmatter,
   type MarkdownInstance,
   type Page,
   BlogCard,

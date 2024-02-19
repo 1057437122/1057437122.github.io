@@ -1,12 +1,24 @@
 import type { ReactNode } from 'react';
 
-import type { IFrontmatter } from '@/dependences';
+import type { IProjectmatter } from '@/dependences';
 import { Section } from '@/dependences';
 
 type IProjectPageProps = {
-  frontmatter: IFrontmatter;
+  projectmatter: IProjectmatter;
   children: ReactNode;
 };
+type TIconProps = {
+  imgSrc: string;
+  imgAlt: string;
+  url?: string;
+};
+const IconComponent = (props: TIconProps) => (
+  <div className="shrink-0">
+    <a href={props.url}>
+      <img className="size-10 rounded" src={props.imgSrc} alt={props.imgAlt} />
+    </a>
+  </div>
+);
 
 const ProjectPage = (props: IProjectPageProps) => (
   <Section>
@@ -14,43 +26,35 @@ const ProjectPage = (props: IProjectPageProps) => (
       <div className="shrink-0">
         <img
           className="size-40 rounded hover:translate-y-1"
-          src={props.frontmatter.imgSrc}
+          src={props.projectmatter.imgSrc}
           alt="img alt"
         />
       </div>
       <div>
         <div className="flex flex-col items-center gap-x-2 p-2 sm:flex-row">
-          <div className="py-3 text-2xl">{props.frontmatter.title}</div>
-          <div className="shrink-0">
-            <a href={props.frontmatter.iosDownloadUrl}>
-              <img
-                className="size-10 rounded"
-                src="/assets/images/ios-icon-white.png"
-                alt={props.frontmatter.title}
-              />
-            </a>
-          </div>
-          <div className="shrink-0">
-            <a href={props.frontmatter.androidDownloadUrl}>
-              <img
-                className="size-10 rounded"
-                src="/assets/images/android-icon-white.png"
-                alt={props.frontmatter.title}
-              />
-            </a>
-          </div>
+          <div className="py-3 text-2xl">{props.projectmatter.title}</div>
+          <IconComponent
+            imgAlt={props.projectmatter.title}
+            imgSrc="/assets/images/ios-icon-white.png"
+            url={props.projectmatter.iosDownloadUrl}
+          />
+          <IconComponent
+            imgAlt={props.projectmatter.title}
+            imgSrc="/assets/images/android-icon-white.png"
+            url={props.projectmatter.androidDownloadUrl}
+          />
         </div>
-        <div>{props.frontmatter.description}</div>
+        <div>{props.projectmatter.description}</div>
       </div>
     </div>
     <div className="flex space-x-4 overflow-x-auto p-4">
-      {props.frontmatter.imgs?.map((img) => {
+      {props.projectmatter.imgs?.map((img) => {
         return (
-          <div className="w-100 h-200 flex  shrink-0 items-center justify-center rounded-lg">
+          <div className="flex shrink-0 items-center justify-center rounded-lg">
             <img
               className="max-h-full max-w-full rounded"
               src={img}
-              alt={props.frontmatter.imgAlt}
+              alt={props.projectmatter.imgAlt}
               loading="lazy"
             />
           </div>

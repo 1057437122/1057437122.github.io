@@ -9,4 +9,5 @@ imgs: ['https://is1-ssl.mzstatic.com/image/thumb/PurpleSource123/v4/b7/23/29/b72
 imgAlt: 'Alert-me'
 iosDownloadUrl: 'https://apps.apple.com/es/app/alert-me/id6444185245'
 androidDownloadUrl: ''
+stacks: ['firebase','google map','location','firebase-notification']
 ---
