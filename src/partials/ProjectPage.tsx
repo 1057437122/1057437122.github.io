@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 import type { IProjectmatter } from '@/dependences';
-import { ColorTags, Section, Tags } from '@/dependences';
+import { RandomTags, Section } from '@/dependences';
 
 type IProjectPageProps = {
   projectmatter: IProjectmatter;
@@ -31,8 +31,8 @@ const ProjectPage = (props: IProjectPageProps) => (
         />
       </div>
       <div>
-        <div className="flex flex-col">
-          <div className="flex flex-col items-center gap-x-2 sm:flex-row">
+        <div className="flex flex-col items-start">
+          <div className="flex flex-col gap-x-3 sm:flex-row">
             <div className="py-3 text-2xl">{props.projectmatter.title}</div>
             <IconComponent
               imgAlt={props.projectmatter.title}
@@ -47,7 +47,7 @@ const ProjectPage = (props: IProjectPageProps) => (
           </div>
           <div className="my-2 flex flex-wrap gap-2">
             {props.projectmatter.stacks?.map((s) => (
-              <Tags color={ColorTags.GRAY}>{s}</Tags>
+              <RandomTags>{s}</RandomTags>
             ))}
           </div>
         </div>

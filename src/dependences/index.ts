@@ -15,7 +15,7 @@ import { PostContent } from './components/PostContent';
 import { PostHeader } from './components/PostHeader';
 import { Project } from './components/Project';
 import { Section } from './components/Section';
-import { ColorTags, Tags } from './components/Tags';
+import { ColorTags, RandomTags, Tags } from './components/Tags';
 import type {
   FrontmatterPage,
   IFrontmatter,
@@ -47,6 +47,7 @@ export {
   PostContent,
   PostHeader,
   Project,
+  RandomTags,
   Section,
   Tags,
 };

@@ -67,4 +67,19 @@ const Tags = (props: ITagsProps) => (
   </div>
 );
 
-export { Tags };
+const RandomTags = (props: { children: ReactNode }) => {
+  const len = Object.keys(colorToClassMap).length;
+  const colorRandom = Math.round(Math.random() * len);
+  const val = Object.keys(colorToClassMap)[colorRandom] as Values<
+    typeof ColorTags
+  >;
+  const colorData = colorToClassMap[val];
+
+  return (
+    <div className={`rounded-md px-2 py-1 text-xs font-semibold ${colorData}`}>
+      {props.children}
+    </div>
+  );
+};
+
+export { RandomTags, Tags };

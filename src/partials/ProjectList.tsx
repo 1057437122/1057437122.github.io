@@ -1,5 +1,5 @@
 import type { IProjectmatter, MarkdownInstance } from '@/dependences';
-import { ColorTags, GradientText, Project, Section, Tags } from '@/dependences';
+import { GradientText, Project, RandomTags, Section } from '@/dependences';
 
 type IProjectListProps = {
   projectList: MarkdownInstance<IProjectmatter>[];
@@ -25,7 +25,7 @@ const ProjectList = (props: IProjectListProps) => (
           category={
             <>
               {p.frontmatter.stacks?.map((s) => (
-                <Tags color={ColorTags.GRAY}>{s}</Tags>
+                <RandomTags>{s}</RandomTags>
               ))}
             </>
           }
