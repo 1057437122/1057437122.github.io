@@ -19,12 +19,32 @@ const ProjectPage = (props: IProjectPageProps) => (
         />
       </div>
       <div>
-        <div className="py-3 text-2xl">{props.frontmatter.title}</div>
+        <div className="flex flex-col items-center gap-x-2 p-2 sm:flex-row">
+          <div className="py-3 text-2xl">{props.frontmatter.title}</div>
+          <div className="shrink-0">
+            <a href={props.frontmatter.iosDownloadUrl}>
+              <img
+                className="size-10 rounded"
+                src="/assets/images/ios-icon-white.png"
+                alt={props.frontmatter.title}
+              />
+            </a>
+          </div>
+          <div className="shrink-0">
+            <a href={props.frontmatter.androidDownloadUrl}>
+              <img
+                className="size-10 rounded"
+                src="/assets/images/android-icon-white.png"
+                alt={props.frontmatter.title}
+              />
+            </a>
+          </div>
+        </div>
         <div>{props.frontmatter.description}</div>
       </div>
     </div>
     <div className="flex space-x-4 overflow-x-auto p-4">
-      {props.frontmatter.imgs.map((img) => {
+      {props.frontmatter.imgs?.map((img) => {
         return (
           <div className="w-100 h-200 flex  shrink-0 items-center justify-center rounded-lg">
             <img

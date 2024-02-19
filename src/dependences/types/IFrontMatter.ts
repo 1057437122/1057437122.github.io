@@ -6,7 +6,9 @@ export interface IFrontmatter {
   imgSrc: string;
   imgAlt: string;
   draft: boolean;
-  imgs: string[];
+  imgs?: string[]; // for projects slider
+  iosDownloadUrl?: string;
+  androidDownloadUrl?: string;
 }
 
 // Workaround to import Astro type. Otherwise, it'll have some compilation errors
