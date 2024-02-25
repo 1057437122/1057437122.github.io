@@ -11,7 +11,7 @@ imgAlt: 'flutter sqlite'
 
 ### Summary
 
-How to store user/project data is very import in every project, for a flutter project as an example, one of the most popular database used in flutter project is `sqlite`. 
+How to store user/project data is very important in every project, for a flutter project as an example, one of the most popular database used in flutter project is `sqlite`. 
 
 As our project move forward, one thing we need to take more care of is to migrate our db, like sometime we need to create a new table, or we need to add some columns to an existed table.
 
