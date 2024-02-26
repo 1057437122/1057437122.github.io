@@ -36,6 +36,7 @@ const Navbar = () => (
         <NavMenuItem href="/">Home</NavMenuItem>
         <NavMenuItem href="/diary/">Diary</NavMenuItem>
         <NavMenuItem href="/flutter/">Flutter</NavMenuItem>
+        <NavMenuItem href="/novel/">Novel</NavMenuItem>
         <NavMenuItem href="/backend/">Backend</NavMenuItem>
         <NavMenuItem href="/others/">Others</NavMenuItem>
       </NavMenu>
