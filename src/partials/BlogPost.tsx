@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 
 import type { IFrontmatter } from '@/dependences';
 import { PostContent, PostHeader, Section } from '@/dependences';
+import { Comments } from '@/dependences/components/Comments';
 import { AppConfig } from '@/utils/AppConfig';
 
 type IBlogPostProps = {
@@ -14,6 +15,7 @@ const BlogPost = (props: IBlogPostProps) => (
     <PostHeader content={props.frontmatter} author={AppConfig.author} />
 
     <PostContent content={props.frontmatter}>{props.children}</PostContent>
+    <Comments />
   </Section>
 );
 
