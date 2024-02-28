@@ -15,7 +15,17 @@ const FooterCopyright = (props: IFooterCopyrightProps) => (
       >
         Lecy
       </a>
-      .
+      . Origin theme of this blog is from{' '}
+      <a target="_blank" href="https://github.com/ixartz/Astro-boilerplate">
+        ixartz
+      </a>
+      . Social Icons are copied from{' '}
+      <a
+        target="_blank"
+        href="https://github.com/silent1mezzo/astro-social-share/tree/main"
+      >
+        astro-social-share
+      </a>
     </div>
   </div>
 );
