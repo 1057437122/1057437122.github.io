@@ -8,12 +8,15 @@ export interface Props {
     title: string;
     description: string;
     keywords?: string;
+    ogImage?:string;
   };
 }
 
 const {
-  head: { title, description, keywords },
+  head: { title, description, keywords ,ogImage},
 } = Astro.props as Props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <html lang='en'>
@@ -24,6 +27,15 @@ const {
     <meta name='description' content={description} />
     <meta name='author' content={AppConfig.author} />
     <meta name='keywords' content={keywords} />
+
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:description" content={description} />
+    <!-- <meta property="og:locale" content="en_GB" /> -->
 
     <link rel='alternate' type='application/rss+xml' href='/rss.xml' />
     <link rel='icon' type='image/x-icon' href='/favicon.ico' />
