@@ -15,13 +15,13 @@ type IBlogPostProps = {
 const BlogPost = (props: IBlogPostProps) => (
   <Section>
     <PostHeader content={props.frontmatter} author={AppConfig.author} />
-
-    <PostContent content={props.frontmatter}>{props.children}</PostContent>
     <MySocialShare
       description={props.frontmatter.description}
       title={props.frontmatter.title}
       url={props.url}
     />
+    <PostContent content={props.frontmatter}>{props.children}</PostContent>
+
     <Comments />
   </Section>
 );

@@ -22,10 +22,10 @@ const MySocialShare = (props: IMySocialShareProps) => {
 
   return (
     <Section>
-      <div className="flex justify-between space-x-7">
+      <div className="mx-auto mt-5 flex max-w-prose space-x-7">
         <a
           target="_blank"
-          className="size-10 fill-green-50"
+          className="size-5 fill-green-50"
           href={twitterUrl}
           rel="noopener noreferrer"
         >
@@ -39,7 +39,7 @@ const MySocialShare = (props: IMySocialShareProps) => {
           </svg>
         </a>
 
-        <a target="_blank" href={facebookUrl} className="size-10 fill-green-50">
+        <a target="_blank" href={facebookUrl} className="size-5 fill-green-50">
           <svg
             role="img"
             viewBox="0 0 24 24"
@@ -50,7 +50,7 @@ const MySocialShare = (props: IMySocialShareProps) => {
           </svg>
         </a>
 
-        <a target="_blank" href={emailUrl} className="size-10 fill-green-50">
+        <a href={emailUrl} className="size-5 fill-green-50">
           <svg
             role="img"
             viewBox="0 0 24 24"
@@ -64,7 +64,7 @@ const MySocialShare = (props: IMySocialShareProps) => {
         <a
           target="_blank"
           href={hackerNewsUrl}
-          className="size-10 fill-green-50"
+          className="size-5 fill-green-50"
         >
           <svg
             role="img"
@@ -76,7 +76,7 @@ const MySocialShare = (props: IMySocialShareProps) => {
           </svg>
         </a>
 
-        <a target="_blank" href={linkedInUrl} className="size-10 fill-green-50">
+        <a target="_blank" href={linkedInUrl} className="size-5 fill-green-50">
           <svg
             role="img"
             viewBox="0 0 24 24"
@@ -87,7 +87,7 @@ const MySocialShare = (props: IMySocialShareProps) => {
           </svg>
         </a>
 
-        <a target="_blank" href={redditUrl} className="size-10 fill-green-50">
+        <a target="_blank" href={redditUrl} className="size-5 fill-green-50">
           <svg
             role="img"
             viewBox="0 0 24 24"
@@ -98,7 +98,7 @@ const MySocialShare = (props: IMySocialShareProps) => {
           </svg>
         </a>
 
-        <a target="_blank" href={whatsAppUrl} className="size-10 fill-green-50">
+        <a target="_blank" href={whatsAppUrl} className="size-5 fill-green-50">
           <svg
             role="img"
             viewBox="0 0 24 24"
