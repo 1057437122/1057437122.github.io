@@ -6,4 +6,5 @@ export const AppConfig = {
   author: 'Baishun',
   locale_region: 'en-us',
   locale: 'en',
+  site_url: 'https://me.lecy.cc',
 };
