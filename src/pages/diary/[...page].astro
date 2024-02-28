@@ -1,23 +1,22 @@
 ---
-import type { FrontmatterPage, IFrontmatter } from "@/dependences";
+import type { FrontmatterPage, IFrontmatter } from '@/dependences';
 import {
   BlogGallery,
   NewerOlderPagination,
   PaginationHeader,
   Section,
-} from "@/dependences";
-
-import { Contact } from "@/partials/Contact";
-import Base from "@/templates/Base.astro";
-import { AppConfig } from "@/utils/AppConfig";
-import { sortByDate } from "@/utils/Posts";
+} from '@/dependences';
+import { Contact } from '@/partials/Contact';
+import Base from '@/templates/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+import { sortByDate } from '@/utils/Posts';
 
 type GetStaticPaths = {
   paginate: any;
 }; // Overrides `GetStaticPathsOptions` types from Astro
 
 export async function getStaticPaths({ paginate }: GetStaticPaths) {
-  const allPosts = await Astro.glob<IFrontmatter>("./*.md");
+  const allPosts = await Astro.glob<IFrontmatter>('./*.md');
   const sortedPosts = sortByDate(allPosts);
 
   // Return a paginated collection of paths for all posts
@@ -32,14 +31,14 @@ const { page } = Astro.props as Props;
 const titleSuffix = ` - ${AppConfig.site_name}`;
 const titleBase = `Blog page ${page.currentPage}`;
 const title = titleBase + titleSuffix;
-const description = "To live with God is to let God live in you.";
+const description = 'To live with God is to let God live in you.';
 ---
 
 <Base head={{ title, description }}>
   <Section>
     <PaginationHeader
-      title="My Diary"
-      description="To live with God is to let God live in you."
+      title='My Diary'
+      description='To live with God is to let God live in you.'
     />
   </Section>
 

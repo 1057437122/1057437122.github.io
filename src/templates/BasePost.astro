@@ -1,9 +1,9 @@
 ---
-import type { IFrontmatter } from "@/dependences";
-import { BlogPost } from "@/partials/BlogPost";
-import { Contact } from "@/partials/Contact";
-import Base from "@/templates/Base.astro";
-import { AppConfig } from "@/utils/AppConfig";
+import type { IFrontmatter } from '@/dependences';
+import { BlogPost } from '@/partials/BlogPost';
+import { Contact } from '@/partials/Contact';
+import Base from '@/templates/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
 
 export interface Props {
   content: IFrontmatter;
@@ -15,9 +15,8 @@ const keywords = `${content.keywords}`;
 ---
 
 <Base head={{ title, description: content.description, keywords }}>
-  <BlogPost frontmatter={content}>
+  <BlogPost frontmatter={content} url={Astro.request.url}>
     <slot></slot>
   </BlogPost>
-
   <Contact />
 </Base>
