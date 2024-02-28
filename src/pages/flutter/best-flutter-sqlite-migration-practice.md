@@ -99,7 +99,44 @@ var database = await openDatabase(
 )
 ```
 
-So, the first time when we run our app, the `version` is 1. In the next app version if we add new migration sql, our database version will be 2, that is when our upgrade method will be called.
+Let's imagine, the first time when we run our app, the `version` is 1. 
+
+After some days we find we need to add director to this table, we will do like this:
+
+```
+const migrations = [
+    $CREATE_HISTORY_TABLE_SQL,
+    $UPDATE_HISTORY_TABLE_ADD_DIRECTOR,//sql we will run to update table
+]
+
+```
+
+The length of `migrations` become 2, so our database version will be 2,  that is when our `onUpgrade` method will be called. 
+
+We will imagine more deeper, next time we add a new column called actor, the `migrations` will be like this:
+
+```
+const migrations = [
+    $CREATE_HISTORY_TABLE_SQL,// run on version 1,
+    $UPDATE_HISTORY_TABLE_ADD_DIRECTOR, // run on version 2
+    $UPDATE_HISTORY_TABLE_ADD_ACTOR, // run on version 3
+]
+
+```
+
+So our version will be 3. Image a user installed the first version, which means the old db version is 1. And now it's 3, so he needs to run the second and the third migrations, that is `${migrations[1]}` and `${migrations[2]}`. 
+
+We can find we need to run our migrations from the index of `oldVersion` to the index of  `migrations' length(which is newVersion)-1`.So our upgrade code maybe like this:
+
+```
+for (int i = oldVersion - 1 ; i < newVersion - 1 ; i++) {
+  if (i >= 0) {
+    await db
+        .execute(upgradeMigrations[i]);
+  }
+}
+
+```
 
 The full code is like this:
 
