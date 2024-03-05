@@ -3,7 +3,7 @@ layout: '@/templates/BasePost.astro'
 title: Use NTP service to sync time on Debian
 description: use ntp service to sync time on debian
 keywords: linux, sync time, timestamp, ntp service, ntp
-pubDate: 2024-03-05T00:00:00Z
+pubDate: 2023-03-05T00:00:00Z
 imgSrc: 'https://images.unsplash.com/photo-1501139083538-0139583c060f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGltZXxlbnwwfHwwfHx8MA%3D%3D'
 imgAlt: 'time'
 ---
