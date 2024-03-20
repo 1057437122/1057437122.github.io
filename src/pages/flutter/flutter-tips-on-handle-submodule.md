@@ -3,7 +3,7 @@ layout: '@/templates/BasePost.astro'
 title: Tips on handling submodules(packages)
 description: some tips on handle submodules(packages) in flutter, like localization or assets
 keywords: flutter, packages, submodules, submodule-localization, submodule-assets, flutter localization, flutter i18n, flutter l10n, flutter packages localization, flutter packages assets
-pubDate: 2021-03-20T00:00:00Z
+pubDate: 2024-03-20T00:00:00Z
 imgSrc: 'https://images.unsplash.com/photo-1614107151491-6876eecbff89?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bG9jYWxpemF0aW9ufGVufDB8fDB8fHww'
 imgAlt: 'flutter packages'
 ---
