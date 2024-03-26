@@ -1,4 +1,3 @@
-
 ---
 layout: '@/templates/BasePost.astro'
 title: Suggested Websites
