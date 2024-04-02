@@ -1,8 +1,8 @@
 ---
 layout: '@/templates/BasePost.astro'
-title: 我的回忆
-description: 记录一下我的年日吧
-keywords: 成长日志
+title: 虚浮人生
+description: 真真假假虚虚实实我的人生
+keywords: 真真假假虚虚实实我的人生
 pubDate: 2024-03-24T00:00:00Z
 imgSrc: 'https://images.unsplash.com/photo-1533158307587-828f0a76ef46?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVtb3JpZXN8ZW58MHx8MHx8fDA%3D'
 imgAlt: 'memories'
