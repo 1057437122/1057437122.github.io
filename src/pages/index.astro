@@ -12,7 +12,7 @@ import { sortByDate, sortProjectByDate } from '@/utils/Posts';
 
 const allPosts = await Astro.glob<IFrontmatter>('./**/*.md');
 const sortedPosts = sortByDate(allPosts);
-const lastThreePosts = sortedPosts.slice(0, 3);
+const lastThreePosts = sortedPosts.slice(0, 6);
 
 const allProjects = await Astro.glob<IProjectmatter>('./projects/*.md');
 const sortedProjects = sortProjectByDate(allProjects);

@@ -3,7 +3,7 @@ layout: "@/templates/BasePost.astro"
 title: My Nvim Configuration - basic
 description: a blog to record my nvim setting with explains
 keywords: nvim, lsp, mason, mason-lspconfig, dap, nvim-dap, lazyvim, lua-snippet
-pubDate: 2024-03-14T00:00:00Z
+pubDate: 2024-05-14T00:00:00Z
 imgSrc: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=4031&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 imgAlt: "nvim power"
 ---
