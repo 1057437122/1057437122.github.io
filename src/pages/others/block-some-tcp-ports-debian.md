@@ -4,7 +4,7 @@ title: Block Some Ports In Debian
 description: a tips of block some ports in debian
 keywords: debian, firewall-cmd, reject ports, block ports
 pubDate: 2024-06-03T00:00:00Z
-imgSrc:"https://plus.unsplash.com/premium_photo-1681487814165-018814e29155?q=80&w=4140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+imgSrc: "https://plus.unsplash.com/premium_photo-1681487814165-018814e29155?q=80&w=4140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 imgAlt: "linux firewall"
 ---
 
