@@ -8,7 +8,7 @@ imgSrc: "https://plus.unsplash.com/premium_photo-1661386253258-64ab9521ce89?w=80
 imgAlt: "dedicate server"
 ---
 
-/ this post focus on configure the networking settings of ADVANCED GEN-2 dedicate server/
+_this post focus on configure the networking settings of ADVANCED GEN-2 dedicate server_
 
 ### intro
 
@@ -63,7 +63,7 @@ Edit the file `/etc/sysctl.conf` and uncomment ` net.ipv4.ip_forward=1` to make 
 
 You can use `systemctl restart networking` to restart network.
 
-/tips: restart your server may help you a lot when network is unreachable/
+_tips: restart your server may help you a lot when network is unreachable_
 
 ### Step 5: install a virtual server.
 
