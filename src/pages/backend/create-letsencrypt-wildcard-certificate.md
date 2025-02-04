@@ -1,11 +1,11 @@
 ---
-layout: '@/templates/BasePost.astro'
+layout: "@/templates/BasePost.astro"
 title: Create Letsencrypt Wildcard Certificate
 description: how to create wildcard certificate with letsencrypt
 keywords: letsencrypt, wildcard certification, certbot, renew letsencrypt certification
 pubDate: 2023-03-05T00:00:00Z
-imgSrc: 'https://images.unsplash.com/photo-1603899122361-e99b4f6fecf5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNlY3VyZXxlbnwwfHwwfHx8MA%3D%3D'
-imgAlt: 'security'
+imgSrc: "https://images.unsplash.com/photo-1603899122361-e99b4f6fecf5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNlY3VyZXxlbnwwfHwwfHx8MA%3D%3D"
+imgAlt: "security"
 ---
 
 _this post is base on you have base knowledge about letsencrypt and certbot_
@@ -14,10 +14,9 @@ The command to create a wildcard certificate is pretty easy, for example with do
 
 ```
 
-certbot certonly --manual --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory -d "*.lecy.cc"
+sudo certbot certonly --manual --preferred-challenges=dns --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d "*.lecy.cc"
 
 ```
-
 
 after run this command on your server, you will got outputs like this:
 
@@ -73,3 +72,4 @@ IMPORTANT NOTES:
 After these steps, you can update the configuration of your `nginx` or `apache` to match the new certification files.
 
 That's it!
+
