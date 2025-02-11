@@ -48,13 +48,13 @@ imgAlt: "mongodb"
 ```
 > db.createUser({user:"myadmin",pwd:"nicetomeetyou",roles:[{role:"readWrite",db:"somedb"}]})
 Successfully added user: {
-	"user" : "myadmin",
-	"roles" : [
-		{
-			"role" : "readWrite",
-			"db" : "somedb"
-		}
-	]
+ "user" : "myadmin",
+ "roles" : [
+  {
+   "role" : "readWrite",
+   "db" : "somedb"
+  }
+ ]
 }
 ```
 
@@ -77,34 +77,34 @@ $: mongosh -u myadmin -p nicetomeetyou --authenticationDatabase somedb
 ```
 > db.users.getIndexes()
 [
-	{
-		"v" : 2,
-		"key" : {
-			"_id" : 1
-		},
-		"name" : "_id_",
-		"ns" : "yourbiz.users"
-	},
-	{
-		"v" : 2,
-		"unique" : true,
-		"key" : {
-			"phone" : 1
-		},
-		"name" : "phone_1",
-		"ns" : "yourbiz.users",
-		"background" : true
-	},
-	{
-		"v" : 2,
-		"unique" : true,
-		"key" : {
-			"outId" : 1
-		},
-		"name" : "outId_1",
-		"ns" : "yourbiz.users",
-		"background" : true
-	}
+ {
+  "v" : 2,
+  "key" : {
+   "_id" : 1
+  },
+  "name" : "_id_",
+  "ns" : "yourbiz.users"
+ },
+ {
+  "v" : 2,
+  "unique" : true,
+  "key" : {
+   "phone" : 1
+  },
+  "name" : "phone_1",
+  "ns" : "yourbiz.users",
+  "background" : true
+ },
+ {
+  "v" : 2,
+  "unique" : true,
+  "key" : {
+   "outId" : 1
+  },
+  "name" : "outId_1",
+  "ns" : "yourbiz.users",
+  "background" : true
+ }
 ]
 >
 ```
@@ -126,6 +126,9 @@ $> mongodump --uri="mongodb://root:example@127.0.0.1:27017/somdb?authSource=admi
 
 ```
 $> mongorestore --uri="mongodb://root:example@127.0.0.1:27017/somdb?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false"
+
+$> mongorestore -u ${Username} --drop --authenticationDatabase ${someDB} ${fileLocation}
+
 ```
 
 5. 设置密码
@@ -136,13 +139,13 @@ $> mongorestore --uri="mongodb://root:example@127.0.0.1:27017/somdb?authSource=a
 switched to db admin
 > db.createUser({user:"myAdmin",pwd:"passwordYOuWant",roles:[{role:"userAdminAnyDatabase",db:"admin"}]})
 Successfully added user: {
-	"user" : "myAdmin",
-	"roles" : [
-		{
-			"role" : "userAdminAnyDatabase",
-			"db" : "admin"
-		}
-	]
+ "user" : "myAdmin",
+ "roles" : [
+  {
+   "role" : "userAdminAnyDatabase",
+   "db" : "admin"
+  }
+ ]
 }
 >
 > db.auth("myAdmin","passwordYOuWant")
@@ -161,4 +164,3 @@ security:
 ```
 db.grantRolesToUser('myaccount',[{role:'readWrite',db:'somedb'}])
 ```
-
