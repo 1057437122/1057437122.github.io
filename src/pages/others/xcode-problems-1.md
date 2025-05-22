@@ -1,11 +1,11 @@
 ---
-layout: '@/templates/BasePost.astro'
+layout: "@/templates/BasePost.astro"
 title: XCode - Problems and solutions
 description: xcode problems and solutions.
 keywords: unable to boot the simulator, xcode problem
 pubDate: 2024-03-12T00:00:00Z
-imgSrc: 'https://images.unsplash.com/photo-1527443195645-1133f7f28990?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFjfGVufDB8fDB8fHww'
-imgAlt: 'mac'
+imgSrc: "https://images.unsplash.com/photo-1527443195645-1133f7f28990?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFjfGVufDB8fDB8fHww"
+imgAlt: "mac"
 ---
 
 ### Unable to boot the simulator
@@ -22,3 +22,6 @@ Go to About this Mac → Storage → Manage → Developer
 
 Delete all the content (no worries!)
 
+### Send file to simulator through AirDrop
+
+You need to have `Downloads` folder first, the solutions is to download any file from internet and save it to `File` , this `Downloads` folder will be automatic created.
