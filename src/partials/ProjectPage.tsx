@@ -79,8 +79,9 @@ const ProjectPage = (props: IProjectPageProps) => {
           );
         })}
       </div>
-
-      <div>{props.children}</div>
+      <div className="prose prose-invert mt-8 prose-img:rounded-lg">
+        {props.children}
+      </div>
     </Section>
   );
 };
