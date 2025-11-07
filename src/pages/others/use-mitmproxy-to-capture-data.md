@@ -18,7 +18,7 @@ imgAlt: "mitmproxy"
 
 ### connect the iPhone to Mac ( two devices should connect to the same WIFI)
 
-...
+In you Wifi settings, change the Http Proxy part.
 
 ### install certification on the iPhone
 
